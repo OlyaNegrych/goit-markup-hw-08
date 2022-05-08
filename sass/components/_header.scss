@@ -1,6 +1,6 @@
 header {
-background-color: $background-color;
-border-bottom: 1px solid #ECECEC;
+ background-color: $background-color;
+ border-bottom: 1px solid #ECECEC;
 }
 
 .page-header {
@@ -8,17 +8,32 @@ border-bottom: 1px solid #ECECEC;
     align-items: center;
 }
 
+.nav-thumb {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        margin-left: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+        margin-right: 300px;
+        justify-content: space-between; 
+    }
+}
+
 .nav {
-display: flex;
-align-items: center;
-color: $title-text-color;
+ display: flex;
+ align-items: center;
+ color: $title-text-color;
+
+ @media screen and (max-width: 767px) {
+     justify-content: space-between;
+ }
 }
 
-.nav > a {
-    display: inline-block;
-}
-
-.list-item,
 .auth__link {
     color: $title-text-color;
     font-weight: 500;
@@ -33,13 +48,16 @@ color: $title-text-color;
 .nav__item {
     position: relative;
 
- &:not(:first-child) {
-    margin-left: 50px;
+    &:not(:first-child) {
+     margin-left: 50px;
  }
 }
 
 .auth__item:not(:first-child) {
-    margin-left: 30px;
+
+    @media screen and (min-width: 1200px) {
+     margin-left: 30px;
+    }
 }
 
 .nav__link {
@@ -59,7 +77,7 @@ color: $title-text-color;
 }
 
 .nav__link--current {
-color: $accent-color;
+ color: $accent-color;
 
  &::after {
   content: '';
@@ -76,8 +94,11 @@ color: $accent-color;
 }
 
 .auth {
-    display: flex;
     margin-left: auto;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .auth__link {
@@ -111,4 +132,37 @@ color: $accent-color;
 .auth__icon {
     margin-right: 10px;
     fill: $text-color;
+}
+
+.btn-menu {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    width: 40px;
+    height: 40px;
+
+    &__icon {
+         width: 40px;
+         height: 40px;
+         fill: $title-text-color;
+
+         &--cross {
+             display: none;
+         }
+    }
+
+    &.is-open .btn-menu__icon--cross {
+        display: block;
+    }
+
+    &.is-open .btn-menu__icon--menu {
+        display: none;
+    }
+
+    @media screen and (min-Width: 768px) {
+        display: none;
+    }
 }
