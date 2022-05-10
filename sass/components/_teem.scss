@@ -7,18 +7,43 @@ background-color: $secondary-bgr-color;
 }
 
 .teem__list {
-    display: flex;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .teem__item {
-width: 270px;
-background: $background-color;
-text-align: center;
+    width: 100%;
+    background: $background-color;
+    text-align: center;
 
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 
- &:not(:first-child) {
+    @media screen and (max-width: 767px) {
+         &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+       width: 50%;
+
+       &:nth-child(odd) {
+            margin-right: 30px;
+        }
+        &:not(:nth-last-child(-n + 2)) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
+    
+    &:not(:first-child) {
     margin-left: 30px;
  }
 }

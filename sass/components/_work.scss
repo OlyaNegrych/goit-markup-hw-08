@@ -1,3 +1,11 @@
+.work {
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
+}
+
 .work__title,
 .teem__title {
 font-size: 36px;
