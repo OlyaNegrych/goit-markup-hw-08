@@ -5,18 +5,21 @@
     background-color: $footer-color;
     background-image: 
     linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
-    url(../images/bgr-img-hero.jpg);
+    url(../../images/hero.jpg);
+    background-size: cover;
     text-align: center;
-
-    @media screen and (max-width: 767px) {
-        background-size: cover;
-    }
+    
+    @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+    background-image: url(../../images/hero@2x.jpg);
+  }
 
     @media screen and (min-width: 1200px) {
         padding-top: 200px;
         padding-bottom: 200px;
     }
-   }
+}
 
 .hero__title {
     font-weight: 900;
