@@ -1,42 +1,43 @@
 header {
  background-color: $background-color;
  border-bottom: 1px solid #ECECEC;
+
+ @media screen and (max-width: 767px) {
+    position: relative;
+  }
 }
 
 .page-header {
-    position: relative;
     display: flex;
     align-items: center;
 }
 
 .nav {
  display: flex;
+ flex-grow: 1;
  align-items: center;
  color: $title-text-color;
-
- @media screen and (max-width: 767px) {
-     justify-content: space-between;
- }
 }
 
 .nav-menu {
     display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
         
     &.is-open {
+        position: absolute;
+        top: 0;
+        left: 0;
         display: block;
+        background-color: $background-color;
         padding-top: 48px;
         padding-bottom: 48px;
         padding-left: 40px;
         padding-right: 15px;
+        width: 100%;
     }
     
     @media screen and (max-width:767px) {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 480px;
-     height: 789px;
-
      background-color: $background-color;
      z-index: 9;
      display: none;  
@@ -49,8 +50,6 @@ header {
     }
 
     @media screen and (min-width: 1200px) {
-        margin-left: 93px;
-        margin-right: 300px;
         justify-content: space-between; 
     }
 }
@@ -112,15 +111,8 @@ header {
       margin-bottom: 64px;
    }
 
-    @media screen and (min-width: 768px) {
-        position: absolute;
-        right: 0;
-        top: 20px;
-    }
-
     @media screen and (min-width: 1200px) {
         display: flex;
-        top: 0;
     }
  }
 
@@ -206,12 +198,9 @@ header {
 }
 
 .btn-menu {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 99;
+    z-index: 10;
     display: inline-flex;
-    margin: 0;
+    margin-left: auto;
     padding: 0;
     border: none;
     background-color: transparent;
