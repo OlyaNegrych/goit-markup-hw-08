@@ -539,7 +539,7 @@ header {
 
 .backdrop {
   position: fixed;
-  z-index: 3;
+  z-index: 99;
   top: 0;
   left: 0;
   padding: 93px 15px;
