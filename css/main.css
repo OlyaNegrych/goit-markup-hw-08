@@ -1448,6 +1448,12 @@ header {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 767px) {
+  .portfolio__description {
+    bottom: 45px;
+  }
+}
+
 .portfolio__text {
   padding: 20px 24px;
   border-right: 1px solid #EEEEEE;
