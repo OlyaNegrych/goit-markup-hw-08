@@ -796,15 +796,22 @@ header {
   display: inline-block;
   width: 16px;
   height: 15px;
-  left: 10px;
-  top: 4px;
+  left: 0;
+  top: -1px;
   border: 2px solid #212121;
   border-radius: 2px;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal-form__icon--checked {
+    left: 10px;
+    top: 4px;
+  }
+}
+
 .modal-form__label---agree {
   margin-bottom: 0;
-  padding-left: 35px;
+  padding-left: 25px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -813,6 +820,7 @@ header {
 
 @media screen and (min-width: 1200px) {
   .modal-form__label---agree {
+    padding-left: 35px;
     font-size: 14px;
     line-height: 1.7;
   }
@@ -821,10 +829,17 @@ header {
 .modal-form__field--checkbox a {
   text-decoration: underline;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #2196F3;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__field--checkbox a {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 @media screen and (min-width: 768px) {
