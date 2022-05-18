@@ -25,7 +25,7 @@ header {
     justify-content: space-between;
         
     &.is-open {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         display: block;
@@ -34,7 +34,8 @@ header {
         padding-bottom: 48px;
         padding-left: 40px;
         padding-right: 15px;
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
     }
     
     @media screen and (max-width:767px) {
@@ -217,6 +218,12 @@ header {
          &--cross {
              display: none;
          }
+    }
+
+    &.is-open {
+        position: fixed;
+        top: 10px;
+        right: 20px;
     }
 
     &.is-open .btn-menu__icon--cross {

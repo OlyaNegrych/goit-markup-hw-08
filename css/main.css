@@ -171,7 +171,7 @@ header {
 }
 
 .nav-menu.is-open {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: block;
@@ -180,7 +180,8 @@ header {
   padding-bottom: 48px;
   padding-left: 40px;
   padding-right: 15px;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 @media screen and (max-width: 767px) {
@@ -398,6 +399,12 @@ header {
 
 .btn-menu__icon--cross {
   display: none;
+}
+
+.btn-menu.is-open {
+  position: fixed;
+  top: 10px;
+  right: 20px;
 }
 
 .btn-menu.is-open .btn-menu__icon--cross {
@@ -932,6 +939,12 @@ header {
   text-transform: uppercase;
   text-align: left;
   color: #212121;
+}
+
+@media screen and (max-width: 767px) {
+  .advantages__title {
+    text-align: center;
+  }
 }
 
 .advantages__text {
@@ -1506,6 +1519,16 @@ header {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__thumb {
+    padding-left: 76px;
+    padding-right: 89px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .logo--footer {
   margin-bottom: 20px;
   padding: 0;
@@ -1513,15 +1536,14 @@ header {
 }
 
 .address-thumb {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 60px;
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .address-thumb {
-    margin-left: 0;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -1529,6 +1551,7 @@ header {
   .address-thumb {
     text-align: left;
     margin-right: 70px;
+    margin-bottom: 0;
   }
 }
 

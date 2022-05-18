@@ -59,14 +59,17 @@
 }
 
 .advantages__title {
-margin-bottom: 10px;
+ margin-bottom: 10px;
+ font-weight: 700;
+ font-size: 14px;
+ line-height: 1.14;
+ text-transform: uppercase;
+ text-align: left;
+ color: $title-text-color;
 
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-text-transform: uppercase;
-text-align: left;
-color: $title-text-color;
+ @media screen and (max-width: 767px) {
+     text-align: center;
+ }
 }
 
 .advantages__text {
