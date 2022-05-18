@@ -1451,6 +1451,7 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
+  padding: 63px 24px;
   display: block;
   z-index: 2;
   font-weight: 400;
@@ -1466,21 +1467,9 @@ header {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 479px) {
-  .portfolio__description {
-    padding: 25px 5px;
-  }
-}
-
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .portfolio__description {
     bottom: 45px;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .portfolio__description {
-    padding: 63px 24px;
   }
 }
 
