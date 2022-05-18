@@ -1454,6 +1454,7 @@ header {
   padding: 63px 24px;
   display: block;
   z-index: 2;
+  overflow-y: auto;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
